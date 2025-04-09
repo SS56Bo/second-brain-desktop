@@ -11,6 +11,18 @@
   overflow: hidden;
 }
 
+h1 {
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Title and Description Containers */
 .title-container,
 .desc-container {
@@ -25,7 +37,7 @@
 label {
   font-size: 16px;
   font-weight: 600;
-  color: #374151;
+  color: white;
   margin-bottom: 8px;
 }
 

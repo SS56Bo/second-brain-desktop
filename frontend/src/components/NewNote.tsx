@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SaveNotesToDisk } from "../../wailsjs/go/main/App";
 import "./NewNote.css";
 
 function NewNote() {
@@ -6,13 +7,15 @@ function NewNote() {
   const [desc, setDesc] = useState<string>("");
 
   // binding for Golang
-  const handleAddNote = () => {
+  const handleAddNote = async () => {
     console.log("Title: ", title);
     console.log("Description: ", desc);
+    await SaveNotesToDisk({ title, desc });
   };
 
   return (
     <div className="main-container">
+      <h1>Add New Note</h1>
       <div className="title-container">
         <label>Title</label>
         <input

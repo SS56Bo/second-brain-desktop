@@ -1,5 +1,4 @@
 import "./App.css";
-import { Greet } from "../wailsjs/go/main/App";
 import { useNavigate } from "react-router-dom";
 
 function App() {
